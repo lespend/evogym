@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700&family=Montserrat:wght@700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body,
+#root,
+.app {
+    height: 100%;
+    width: 100%;
+    font-family: 'Gothic A1', sans-serif;
+    @apply text-gray-500;
+}
