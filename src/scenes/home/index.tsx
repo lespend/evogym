@@ -1,7 +1,7 @@
 import { SelectedPage } from "@/shared/types"
 import { useMediaQuery } from "@/hooks/useMediaQuery"
 import ActionButton from "@/components/ActionButton"
-import { ActionButtonVariants } from "@/components/ActionButton"
+import { ActionButtonVariants } from "@/shared/types"
 import HomePageGraphics from "@/assets/HomePageGraphic.png"
 import SponsorRedbull from "@/assets/SponsorRedbull.png"
 import SponsorFortune from "@/assets/SponsorFortune.png"
@@ -10,13 +10,18 @@ import { motion } from "framer-motion"
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
+    reference: (el: HTMLElement) => void;
 }
 
-const Home = ({ setSelectedPage }: Props) => {
+const Home = ({ setSelectedPage, reference }: Props) => {
     const isLargeScreen = useMediaQuery('(min-width: 1100px)')
 
     return (
-        <section id='home' className="gap-16 md:h-full md:pb-0 pt-[88px]">
+        <motion.section 
+            id='home' 
+            className="gap-16 md:h-full md:pb-0 pt-[88px]"
+            ref={reference}
+        >
             <div className="w-5/6 mx-auto flex items-center justify-center flex-col md:flex-row md:pb-8">
                 <motion.div
                     className="md:basis-3/5 z-10"
@@ -104,7 +109,7 @@ const Home = ({ setSelectedPage }: Props) => {
                     </div>
                 </div>
             )}
-        </section>
+        </motion.section>
     )
 }
 
