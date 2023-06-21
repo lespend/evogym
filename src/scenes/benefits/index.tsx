@@ -11,7 +11,6 @@ import BenefitItem from "./BenefitItem";
 import ActionButton from "@/components/ActionButton";
 import BenefitsPageGraphic from '@/assets/BenefitsPageGraphic.png'
 import { useMouseCoordinates } from "@/hooks/useMouseCoordinates";
-import { useEffect } from 'react'
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
