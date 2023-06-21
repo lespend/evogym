@@ -22,3 +22,9 @@ export enum ActionButtonVariants {
     outlined = 'outlined',
     filled = 'filled',
 }
+
+export type ClassType = {
+    name: string;
+    description?: string;
+    image: string;
+}

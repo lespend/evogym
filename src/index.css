@@ -13,3 +13,14 @@ body,
     font-family: 'Gothic A1', sans-serif;
     @apply text-gray-500;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    @apply bg-primary-100;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    @apply bg-primary-500;
+}

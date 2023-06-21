@@ -34,8 +34,8 @@ const Home = ({ setSelectedPage, reference }: Props) => {
                         visible: { opacity: 1, x: 0 }
                     }}
                 >
-                    <h1 className="mt-20 md:mt-0 relative before:absolute before:-left-14 before:-top-32 before:invisible md:before:visible before:content-['EVOGYM'] before:font-montserrat before:font-bold before:text-[150px] before:text-gray-50 before:z-[-1]">
-                        <span className='text-7xl font-bold font-montserrat uppercase'>Evogym</span>
+                    <h1 className="mt-20 md:mt-0 relative before:absolute before:-left-14 before:-top-32 before:content-[''] md:before:content-['EVOGYM'] before:font-montserrat before:font-bold before:text-[150px] before:text-gray-50 before:z-[-1]">
+                        <span className='xs:text-7xl font-bold font-montserrat uppercase text-5xl'>Evogym</span>
                         <br />
                         <span className='inline-block text-4xl mt-2 font-light font-montserrat uppercase'>лучший фитнес.</span>
                     </h1>

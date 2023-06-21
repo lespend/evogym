@@ -5,6 +5,9 @@ import Home from './scenes/home';
 import Benefits from './scenes/benefits';
 import { useRef } from 'react'
 import { NavigationLinkToLabel } from '@/shared/types';
+import OurClasses from './scenes/ourClasses';
+import ContactUs from './scenes/contactUs';
+import Footer from './scenes/footer';
 
 function App() {
   const pageRefs = useRef<HTMLElement[]>([])
@@ -15,7 +18,6 @@ function App() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY
       setIsTopOfPage(!(scrollPosition > 0))
-      console.log(pageRefs)
 
       pageRefs.current.forEach((page) => {
         const {top, bottom} = page.getBoundingClientRect()
@@ -40,6 +42,9 @@ function App() {
       />
       <Home setSelectedPage={setSelectedPage} reference={ref => (pageRefs.current[0] = ref)}/>
       <Benefits setSelectedPage={setSelectedPage} reference={ref => (pageRefs.current[1] = ref)}/>
+      <OurClasses reference={ref => (pageRefs.current[2] = ref)}/>
+      <ContactUs reference={ref => (pageRefs.current[3] = ref)}/>
+      <Footer/>
     </div>
   )
 }
